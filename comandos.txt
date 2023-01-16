@@ -1,0 +1,26 @@
+--primer se istala esta libreria 
+
+pip install psycopg2
+
+en pgAdmin 4
+correr query tool
+eh escribir:
+SELECT * FROM "carpetaquealojaclase_classname"
+
+//ingresar dato
+
+>>> from academic.models import Curso
+>>> cur = Curso.objects.create(name='Algebra',creditos = 8)
+>>>
+
+//muestra la lisat de una mejor manera
+con este comando muestra tres pocinoes 0 = id , 1 = name , 2 = creaditos
+se debe craer una nueva variable donde mostrar los datos actualiazados
+
+>>> cursEdit.name = 'Lenguaje'
+>>> cursEdit.save()
+>>> curso2 = Curso.objects.all()
+>>> exec("for c in curso2: print('{0} - {1} - {2}' .format(c.id,c.name,c.creditos))")
+1 - Algebra - 8
+2 - PC - 10
+
